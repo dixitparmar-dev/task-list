@@ -71,7 +71,7 @@
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
-            className="icon icon-tabler icons-tabler-outline icon-tabler-circle-dashed-check"
+            className="icon icon-tabler icons-tabler-outline icon-tabler-circle-dashed-check h-10 w-10 lg:h-4 lg:w-4"
           >
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
             <path d="M8.56 3.69a9 9 0 0 0 -2.92 1.95" />
@@ -97,7 +97,7 @@
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
-            class="lucide lucide-circle h-5 w-5"
+            class="h-10 w-10 lg:h-4 lg:w-4"
           >
             <circle cx="12" cy="12" r="10"></circle>
           </svg>
@@ -114,7 +114,7 @@
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
-            class="icon icon-tabler icons-tabler-outline icon-tabler-trash"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-trash h-10 w-10 lg:h-4 lg:w-4"
           >
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
             <path d="M4 7l16 0" />
@@ -136,7 +136,7 @@
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
-            class="icon icon-tabler icons-tabler-outline icon-tabler-square-rounded-plus"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-square-rounded-plus h-10 w-10 lg:h-4 lg:w-4"
           >
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
             <path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z" />
@@ -147,9 +147,9 @@
 
         return (
           <div className="min-h-screen flex items-center justify-center p-4">
-            <div className="bg-white rounded-xl w-[84%]  lg:max-w-md">
-              <div className="text-center p-4">
-                <h1 className="text-2xl font-[500] flex items-center gap-2 ">
+            <div className="bg-white rounded-xl w-[90%]  lg:max-w-md">
+              <div className="text-center p-16 lg:p-4">
+                <h1 className="text-6xl lg:text-2xl font-[500] flex items-center gap-2 ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -160,7 +160,7 @@
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="lucide lucide-tag h-4 w-4"
+                    className="h-10 w-10 lg:h-4 lg:w-4"
                   >
                     <path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z" />
                     <circle cx="7.5" cy="7.5" r=".5" fill="currentColor" />
@@ -176,20 +176,20 @@
                     value={newTodo}
                     onChange={(e) => setNewTodo(e.target.value)}
                     onKeyDown={handleKeyDown}
-                    className="flex-1 px-3 py-2   rounded-md focus:outline-none "
+                    className="flex-1 px-3 py-2 ml-10 lg:ml-0 focus:outline-none text-4xl lg:text-sm mb-10"
                   />
                 </div>
 
                 <div className="space-y-3">
                   {todos.length === 0 ? (
-                    <p className="text-center text-gray-400 text-[10px] font-[500]">
+                    <p className="text-center text-gray-400 text-[26px] mt-20 lg:mt-0 lg:text-[10px] font-[500]">
                       No tasks yet. Add one above!
                     </p>
                   ) : (
                     todos.map((todo) => (
                       <div
                         key={todo.id}
-                        className={`flex items-center justify-between p-3 rounded-lg transition-all ${
+                        className={`flex items-center justify-between p-6 lg:p-3 rounded-lg transition-all ${
                           todo.completed
                             ? "bg-gray-100 text-gray-400"
                             : "bg-gray-50"
@@ -207,7 +207,7 @@
                             )}
                           </button>
                           <span
-                            className={todo.completed ? "line-through" : ""}
+                          className={`${todo.completed ? "line-through" : ""} text-3xl lg:text-lg`}
                           >
                             {todo.text}
                           </span>
